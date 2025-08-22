@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+
+class MachineData():
+    AVAILABLE_COINS_OUTPUT = []
+    ACCEPTABLE_COINS = []

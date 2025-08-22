@@ -1,0 +1,14 @@
+{   
+    "water": 20, 
+    "milk": 125, 
+    "tea": 110, 
+    "coffee": 85, 
+    "juice": 95, 
+    "cappuccino": 360, 
+    "fruittea": 365, 
+    "milktea": 400,
+    "milkshake": 380, 
+    "poison": -200, 
+    "mysterious": 100, 
+    "doublemysterious": 200
+}   

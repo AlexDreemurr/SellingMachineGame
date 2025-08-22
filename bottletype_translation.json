@@ -1,0 +1,8 @@
+{
+    "small": "mini", 
+    "common": "normal", 
+    "long": "long", 
+    "giant": "large", 
+    "longlong": "longlong",
+    "longlonglong":"longlonglong"
+}

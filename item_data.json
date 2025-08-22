@@ -1,0 +1,31 @@
+{
+    "Pure Water":         {"volume": "500ml", 
+                            "price": 60, 
+                            "count": 5,
+                            "position": ["A1", "A2", "A3"],
+                            "tag": "water"},
+
+    "Instant Coffee":     {"volume": "400ml", 
+                            "price": 140,
+                            "count": 5, 
+                            "position": ["A4", "A5", "A6", "A7"],
+                            "tag": "coffee"},
+
+    "Orange Juice":        {"volume": "350ml", 
+                            "price": 165,
+                            "count": 5, 
+                            "position": ["B1", "B2", "B3"],
+                            "tag": "juice"},
+
+    "Wheat Tea":          {"volume": "600ml", 
+                            "price": 180,
+                            "count": 5, 
+                            "position": ["B4", "B5"],
+                            "tag": "tea"},
+
+    "Fresh Milk":        {"volume": "300ml", 
+                            "price": 200, 
+                            "count": 5, 
+                            "position": ["B6", "B7"],
+                            "tag": "milk"}
+}
