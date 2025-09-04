@@ -195,10 +195,13 @@ while game_status:
                         extra_money = main_extraGame01()
                         task_money = uiscreenSectionSumming.display(1, extra_money)
                         # 给玩家加钱
-
+                        extra_coins = Charger.charger(extra_money)
                         task_coins = Charger.charger(task_money)
+                        for coin in extra_coins:
+                            player.addCoin(coin)
                         for coin in task_coins:
                             player.addCoin(coin)
+
 
                     # 播放下一章开头动画
                     if game_section == 1 and game_round == 3:

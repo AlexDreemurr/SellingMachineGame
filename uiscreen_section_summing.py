@@ -33,10 +33,10 @@ class uiscreenSectionSumming():
     """
             print(section_summing_page)
 
-            print("                 【瓶子射手】附加游戏的奖金：", judgeEarnOrLose(game_income))
+            print("              【瓶子射手】附加游戏的奖金：", judgeEarnOrLose(game_income))
             print()
             summary_list = TaskManager.returnSummaryList()
-            print("                 \033[1;33m额外任务     完成度        完成状态      获得奖金\033[0m")
+            print("             \033[1;33m额外任务     完成度        完成状态      获得奖金\033[0m")
             time.sleep(1)
             total_sum = 0
             for summary in summary_list:
@@ -45,7 +45,7 @@ class uiscreenSectionSumming():
                 name, percentage, status, salary = summary
                 total_sum += salary
 
-                print(f"                 {space_counter(name, 14)}{space_counter((str(percentage) + '%'), 14)}{space_counter(status, 14)}{space_counter(judgeEarnOrLose(salary), 10)}")
+                print(f"             {space_counter(name, 14)}{space_counter((str(percentage) + '%'), 14)}{space_counter(status, 14)}{space_counter(judgeEarnOrLose(salary), 10)}")
                 time.sleep(0.5)
 
             print()
@@ -53,7 +53,7 @@ class uiscreenSectionSumming():
             print("             任务总盈利：                                 ", judgeEarnOrLose(total_sum))
             print()
             print()
-            input("            >>> 按回车进入下一章。")
+            input("             >>> 按回车进入下一章。")
             return total_sum
 
 '''
