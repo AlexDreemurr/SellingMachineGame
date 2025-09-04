@@ -28,6 +28,7 @@ with open(os.path.join(BASE_DIR, "json/base_or_mixture.json"), "r", encoding="ut
          '''
 
 def get_luckybottle_probability(x: int) -> float:
+    '''输入当前回合数，返回生成幸运瓶子的概率'''
     # 已知前6个回合
     fixed = {
         1: 0.04,
@@ -51,6 +52,7 @@ def get_luckybottle_probability(x: int) -> float:
     return round(p, 4)  # 保留4位小数
 
 def get_wordshow_probability(x: int) -> float:
+    '''输入当前回合数，返回基底瓶子上有字的概率'''
     # 前10个回合的固定值
     fixed = {
         1: 1.00,
@@ -84,6 +86,9 @@ class BottletypeNotFound(Exception):
     pass
 
 class Bottle():
+    '''这是所有瓶子类的父类
+        创建瓶子实例时请用子类BasedBottle或MixedBottle'''
+
     def __init__(self, tag, volume = 0, bottletype = ""):
         '''tag:    json商品标签，有water, juice等
            label:  uiscreen对应显示的瓶子样式编号'''
@@ -115,6 +120,7 @@ class BasedBottle(Bottle):
     '''BasedBottle专用于基底瓶子属性的类，父类为Bottle'''
 
     def __init__(self, tag, volume = 0, bottletype = ""):
+        '''tag: 饮料标签(water, milk...)'''
         # 调用父类初始化函数
         super().__init__(tag, volume=volume, bottletype=bottletype)
 
