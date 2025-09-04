@@ -4,6 +4,7 @@ from coin import Coin
 from coin_charger import Charger, MoneyNotEnoughError
 from bottle import Bottle, MixedBottle, BasedBottle
 from extraGame_001.main import Main as main_extraGame01
+from game_pics import chapter_1_bonus_level_pic
 from machine import Machine, ItemNotFindError, ItemNotEnoughError, CoinNotAvailableError, HaveNoMoneyToBuyError
 from shared_machinedata import MachineData
 from shared_userdata import UserData
@@ -187,6 +188,10 @@ while game_status:
                     # 根据阶段数和回合数播放阶段小结画面
                     if game_section == 1 and game_round == 3:
                         clear()
+                        print(chapter_1_bonus_level_pic)
+                        input("            >>> 按回车开始奖励关：记得按鼠标移动瓶子哦~")
+                        clear()
+                        # 跳转至奖励关
                         extra_money = main_extraGame01()
                         task_money = uiscreenSectionSumming.display(1, extra_money)
                         # 给玩家加钱
