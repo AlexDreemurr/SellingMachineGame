@@ -1,0 +1,65 @@
+{
+    "cappuccino": {"small":         [0, 1000], 
+                   "common":        [1001, 1750],
+                   "giant":         [1751, 9999]
+                  },
+    
+    "milktea":    {"small":         [0, 1000], 
+                   "common":        [1001, 1750],
+                   "giant":         [1751, 9999]
+                  },
+                
+    
+    "milkshake":   {"small":         [0, 1000], 
+                   "common":        [1001, 1750],
+                   "giant":         [1751, 9999]
+                   },
+                
+    "poison":     {"small":         [0, 1000], 
+                   "common":        [1001, 1750],
+                   "giant":         [1751, 9999]
+                   },
+
+    "fruittea":     {"common":         [0, 1750], 
+                     "giant":         [1751, 9999]
+                   },
+
+    "wine":       {"small":         [0, 500], 
+                   "common":        [501, 1250],
+                   "long":         [1251, 1750],
+                   "giant":        [1751, 2250],
+                   "giantlong":    [2251, 9999]
+                   },
+
+    "beer":       {"small":         [0, 1000], 
+                   "common":        [1001, 1750],
+                   "giant":         [1751, 9999]
+                   },
+
+    "juiceyogurt":      {"small":         [0, 1000], 
+                        "common":          [1001, 1750],
+                        "giant":         [1751, 9999]
+                        },
+
+    "sweetwine":      {"small":         [0, 1000], 
+                       "common":          [1001, 1750],
+                       "giant":         [1751, 9999]
+                      },
+                      
+    "doublemysterious": {"common": [0, 1250],
+                         "long":   [1251, 1750],
+                         "longlong":[1751, 9999]
+                        },
+
+    "base": {"small": [0, 499], 
+            "common": [500, 749], 
+            "long":   [750, 1249], 
+            "giant":  [1250, 9999]},
+
+    "mysterious":   {"common": [0, 749], 
+                    "long":   [750, 1249], 
+                    "longlong":  [1250, 1749], 
+                    "longlonglong":[1750, 9999]}
+
+
+}

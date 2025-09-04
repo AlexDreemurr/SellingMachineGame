@@ -1,31 +1,36 @@
 {
-    "Pure Water":         {"volume": "500ml", 
-                            "price": 60, 
+    "农夫山泉":         {"price": 50, 
                             "count": 5,
                             "position": ["A1", "A2", "A3"],
                             "tag": "water"},
 
-    "Instant Coffee":     {"volume": "400ml", 
-                            "price": 140,
+    "雀巢咖啡":     {"price": 100,
                             "count": 5, 
                             "position": ["A4", "A5", "A6", "A7"],
                             "tag": "coffee"},
 
-    "Orange Juice":        {"volume": "350ml", 
-                            "price": 165,
+    "美汁源果汁":        {"price": 125,
                             "count": 5, 
                             "position": ["B1", "B2", "B3"],
                             "tag": "juice"},
 
-    "Wheat Tea":          {"volume": "600ml", 
-                            "price": 180,
+    "麦茶":          {"price": 150,
                             "count": 5, 
                             "position": ["B4", "B5"],
                             "tag": "tea"},
 
-    "Fresh Milk":        {"volume": "300ml", 
-                            "price": 200, 
+    "伊利鲜牛奶":        {"price": 180, 
                             "count": 5, 
                             "position": ["B6", "B7"],
-                            "tag": "milk"}
+                            "tag": "milk"},
+
+    "酒精饮料":        {"price": 300, 
+                             "count": 5, 
+                             "position": ["A4", "A5", "A6", "A7"],
+                             "tag": "alcohol"},
+
+    "上海老酸奶":        {"price": 115, 
+                                "count": 5, 
+                                "position": ["B6", "B7"],
+                                "tag": "yogurt"}
 }

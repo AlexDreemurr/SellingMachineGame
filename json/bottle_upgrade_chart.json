@@ -1,0 +1,20 @@
+{
+    "water":             ["small", "common", "long", "giant"],
+    "coffee":            ["small", "common", "long", "giant"], 
+    "juice":             ["small", "common", "long", "giant"], 
+    "milk":              ["small", "common", "long", "giant"], 
+    "tea":               ["small", "common", "long", "giant"], 
+    "alcohol":           ["small", "common", "long", "giant"], 
+    "yogurt":            ["small", "common", "long", "giant"], 
+    "milktea":           ["small", "common", "giant"], 
+    "milkshake":         ["small", "common", "giant"],
+    "cappuccino":        ["small", "common", "giant"], 
+    "fruittea":          ["common", "giant"], 
+    "wine":              ["small", "common", "long", "giant", "giantlong"],
+    "beer":              ["small", "common", "giant"],
+    "juiceyogurt":       ["small", "common", "giant"],
+    "sweetwine":         ["small", "common", "giant"],
+    "poison":            ["small", "common", "giant"], 
+    "mysterious":        ["common", "long", "longlong", "longlonglong"], 
+    "doublemysterious":  ["common", "long", "longlong"]
+}

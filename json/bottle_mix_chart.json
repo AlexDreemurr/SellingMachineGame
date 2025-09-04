@@ -1,0 +1,105 @@
+{
+    "juice":            [["juice", "water"],
+                          ["juice", "juice"]],
+
+    "milk":              [["milk", "water"],
+                          ["milk", "milk"]], 
+                         
+    "tea":               [["tea", "water"],
+                          ["tea", "tea"]],
+
+    "coffee":            [["coffee", "water"], 
+                          ["coffee", "coffee"]],
+
+    "water":             [["water", "water"]],
+
+    "cappuccino":       [["milk", "coffee"], 
+                          ["cappuccino", "water"],
+                          ["cappuccino", "cappuccino"],
+                          ["cappuccino", "milk"],
+                          ["cappuccino", "coffee"]],
+                     
+    "milktea":           [["milk", "tea"],
+                          ["milktea", "water"],
+                          ["milktea", "milktea"],
+                          ["milktea", "milk"],
+                          ["milktea", "tea"]],
+                    
+    "milkshake":         [["milk", "juice"],
+                          ["milkshake", "water"],
+                          ["milkshake", "milkshake"],
+                          ["milkshake", "milk"],
+                          ["milkshake", "juice"]],
+        
+    "fruittea":          [["juice", "tea"],
+                          ["fruittea", "water"],
+                          ["fruittea", "fruittea"],
+                          ["fruittea", "juice"], 
+                           ["fruittea", "tea"]],
+    
+    "poison":            [["coffee", "tea"],
+                          ["coffee", "juice"],
+                          ["poison", "water"],
+                          ["poison", "poison"],
+                          ["cappuccino", "juice"],
+                          ["cappuccino", "tea"],
+                          ["milkshake", "coffee"],
+                          ["milkshake", "tea"],
+                          ["fruittea", "coffee"],
+                          ["fruittea", "milk"]], 
+        
+    "mysterious":        [["mysterious", "water"],
+                          ["mysterious", "tea"],
+                          ["mysterious", "juice"],
+                          ["mysterious", "coffee"],
+                          ["mysterious", "milk"],
+                          ["mysterious", "cappuccino"],
+                          ["mysterious", "milktea"],
+                          ["mysterious", "fruittea"],
+                          ["mysterious", "milkshake"],
+                          ["mysterious", "poison"]],
+                        
+    "doublemysterious":        [["doublemysterious", "water"],
+                                ["doublemysterious", "tea"],
+                                ["doublemysterious", "juice"],
+                                ["doublemysterious", "coffee"],
+                                ["doublemysterious", "milk"],
+                                ["doublemysterious", "cappuccino"],
+                                ["doublemysterious", "milktea"],
+                                ["doublemysterious", "fruittea"],
+                                ["doublemysterious", "milkshake"],
+                                ["doublemysterious", "poison"], 
+                                ["mysterious", "mysterious"], 
+                                ["doublemysterious", "doublemysterious"],
+                                ["doublemysterious", "mysterious"]],
+                            
+    "alcohol":          [["water", "alcohol"], 
+                         ["alcohol", "alcohol"]],
+
+    "yogurt":           [["water", "yogurt"],
+                         ["yogurt", "yogurt"]],
+
+    "wine":             [["water", "wine"],
+                         ["wine", "wine"],
+                         ["alcohol", "juice"],
+                         ["alcohol", "wine"],
+                         ["juice", "wine"]],
+
+    "beer":             [["water", "beer"],
+                         ["beer", "beer"],
+                         ["alcohol", "tea"],
+                         ["alcohol", "beer"],
+                         ["tea", "beer"]],
+
+    "juiceyogurt":      [["water", "juiceyogurt"],
+                         ["juiceyogurt", "juiceyogurt"],
+                         ["juice", "yogurt"],
+                         ["juiceyogurt", "juice"],
+                         ["juiceyogurt", "yogurt"]],
+
+    "sweetwine":        [["water", "sweetwine"],
+                         ["sweetwine", "sweetwine"],
+                         ["yogurt", "alcohol"],
+                         ["yogurt", "sweetwine"],
+                         ["alcohol", "sweetwine"]]
+                }

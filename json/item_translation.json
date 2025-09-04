@@ -1,0 +1,20 @@
+{
+    "water": "纯净水",
+    "coffee": "咖啡", 
+    "juice": "果汁", 
+    "milk": "牛奶", 
+    "tea": "茶", 
+    "alcohol": "酒精饮料",
+    "yogurt": "酸奶",
+    "milktea": "奶茶", 
+    "milkshake": "水果味奶昔",
+    "cappuccino": "卡布奇诺", 
+    "fruittea": "果茶", 
+    "wine": "果酒",
+    "beer": "啤酒",
+    "juiceyogurt": "水果酸奶",
+    "sweetwine": "甜酒酿",
+    "poison": "毒药", 
+    "mysterious": "幸运瓶子", 
+    "doublemysterious": "双重幸运瓶子"
+}

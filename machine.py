@@ -6,14 +6,18 @@ import sys
 import random
 from coin import Coin
 from coin_charger import Charger
+from copy import deepcopy
 from shared_machinedata import MachineData
 from useful_methods.price_round import price_round
 from seller import Seller
 
 BASE_DIR = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(__file__)
 
-with open(os.path.join(BASE_DIR, "item_data.json"), "r", encoding="utf-8") as f:
+with open(os.path.join(BASE_DIR, "json/item_data.json"), "r", encoding="utf-8") as f:
     ITEM_DATA = json.loads(f.read())
+
+with open(os.path.join(BASE_DIR, "json/menu.json"), "r", encoding="utf-8") as f:
+    MENU = json.loads(f.read())
  
 class ItemNotExistError(Exception):
     pass
@@ -35,8 +39,23 @@ class Machine():
     ACCEPTABLE_COINS = [10, 50, 100, 500]
     AVAILBALE_COINS_OUTPUT = sorted([1, 5, 10, 50, 100, 500], reverse = True)
 
-    # 贩卖机商品信息
-    item_data = ITEM_DATA
+    # 贮存操作可接受的硬币
+    ACCEPTABLE_COINS_FOR_SAVE = [100, 500]
+
+    # 贩卖机商品信息（所有商品）
+    item_data_total = ITEM_DATA
+    item_data = {}
+
+    def setMenuItem(menu_number: str):
+        '''返回数字对应的菜单的item_data的饮料字典'''
+        menu = deepcopy(MENU[menu_number])
+        item_data = {}
+        for item in menu:
+            for item_name in Machine.item_data_total:
+                if Machine.item_data_total[item_name]["tag"] == item:
+                    item_data[item_name] = deepcopy(Machine.item_data_total[item_name])
+        return item_data
+
     # 总共累计盈利金额
     total_earned = 0
     # 钱币增长倍率
@@ -69,7 +88,7 @@ class Machine():
         for item in Machine.item_data:
             count += Machine.item_data[item]["count"]
         return count
-
+    
     def delete(item_name):
         '''删除贩卖机的某项商品信息'''
         del Machine.item_data[item_name]
@@ -125,7 +144,7 @@ class Machine():
 
         for item in already_items:
             Machine.item_data[item]["count"] += each_add
-        
+            Machine.item_data_total[item]["count"] += each_add
 
         '''
         added_item_list = [-1, ]
@@ -154,9 +173,12 @@ class Machine():
         Seller.gap = price_round(Seller.gap * (1 + Machine.rise_percentage))
 
         # 增加物价
+        for item in Machine.item_data_total:
+            #Machine.item_data[item]["price"] = price_round(Machine.item_data[item]["price"] * (1 + Machine.rise_percentage))
+            Machine.item_data_total[item]["price"] = price_round(Machine.item_data_total[item]["price"] * (1 + Machine.rise_percentage))
         for item in Machine.item_data:
             Machine.item_data[item]["price"] = price_round(Machine.item_data[item]["price"] * (1 + Machine.rise_percentage))
-
+            
         # 增加回收价格
         for name in Seller.PRICE_CHART:
             Seller.PRICE_CHART[name] = price_round(Seller.PRICE_CHART[name] * (1 + Machine.rise_percentage))
@@ -172,6 +194,7 @@ class Machine():
         # 计算总盈利，剩余商品数减一
         Machine.total_earned += Machine.item_data[item_name]["price"]
         Machine.item_data[item_name]["count"] -= 1
+        Machine.item_data_total[item_name]["count"] -= 1
 
         # 售货机存储硬币清空
         Machine.clearCoin()

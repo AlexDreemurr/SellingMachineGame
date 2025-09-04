@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from useful_methods.price_round import price_round
-from bottle import Bottle, MixedBottle
+from bottle import Bottle, MixedBottle, BasedBottle
 import random
 import os
 import sys
@@ -9,31 +9,21 @@ import json
 
 BASE_DIR = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(__file__)
 
-with open(os.path.join(BASE_DIR, "sell_price.json"), "r", encoding="utf-8") as f:
+with open(os.path.join(BASE_DIR, "json/sell_price.json"), "r", encoding="utf-8") as f:
     PRICE_CHART_0 = json.loads(f.read())
+
+with open(os.path.join(BASE_DIR, "json/sell_volume_percentage.json"), "r", encoding="utf-8") as f:
+    VOLUME_PERCENTAGE = json.loads(f.read())
 
 class Seller():
     PRICE_CHART = PRICE_CHART_0
-    gap = 400
+    gap = 600
 
     def __volumePercentage(bottle):
         bottletype = bottle.bottletype
-        if bottletype == "small":
-            return 0.6
-        elif bottletype == "common":
-            return 1.0
-        elif bottletype == "long":
-            return 1.25
-        elif bottletype == "giant":
-            return 1.5
-        elif bottletype == "longlong":
-            return 1.5
-        elif bottletype == "longlonglong":
-            return 2.0
-        else:
-            return 1.0
+        return VOLUME_PERCENTAGE[bottletype]
         
-    def sell(bottle: Bottle | MixedBottle):
+    def sell(bottle: Bottle | MixedBottle | BasedBottle):
         '''提供饮料，返回可卖出的价格（末位保留0/5'''
 
         if bottle.tag == "mysterious":

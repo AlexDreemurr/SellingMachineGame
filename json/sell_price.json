@@ -1,0 +1,20 @@
+{   
+    "water": 15, 
+    "milk": 120, 
+    "tea": 100, 
+    "coffee": 65, 
+    "juice": 80, 
+    "alcohol": 200, 
+    "yogurt": 75, 
+    "cappuccino": 310, 
+    "fruittea": 300, 
+    "milktea": 365,
+    "milkshake": 335, 
+    "poison": -200, 
+    "wine": 450,
+    "beer": 500,
+    "juiceyogurt": 260,
+    "sweetwine": 450,
+    "mysterious": 200, 
+    "doublemysterious": 400
+}   
