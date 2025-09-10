@@ -13,6 +13,31 @@
     <button onclick="countBottles()">点我</button>
     <p id="show_count_text"></p>
 
+    <section>
+    <h2>注册</h2>
+    <form id="signupForm">
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="password" type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    </section>
+
+    <section>
+        <h2>登录</h2>
+        <form id="loginForm">
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+        </form>
+    </section>
+
+    <section>
+        <button id="logoutBtn">Log Out</button>
+    </section>
+
+    <pre id="status" style="background:#f0f0f0;padding:8px;"></pre>
+
+    
     <script type="module" src="script.js"></script>
     <script src="countBottles.js"></script>
 
