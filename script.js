@@ -37,11 +37,13 @@ document.getElementById('logoutBtn').addEventListener('click', async () => {
 })
 
 // 页面加载时检查当前 session
-(async () => {
-    const { data } = await supabase.auth.getSession()
-    if (data.session) {
-    status('当前已登录用户:\n' + JSON.stringify(data.session.user))
-    } else {
-    status('当前没有用户登录')
-    }
-})
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data } = await supabase.auth.getSession();
+  if (data.session) {
+    status('当前已登录用户:\n' + JSON.stringify(data.session.user));
+  } else {
+    status('当前没有用户登录');
+  }
+});
+
+
