@@ -1,12 +1,14 @@
-let click_times = 0;
+console.log("hello");
 
-function countBottles() {
-    let count_text = document.getElementById("show_count_text");
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-    let bottle_elements = document.getElementById("bottle_list");
-    let bottle_list = Array.from(bottle_elements.children).map(li => li.textContent);
+const SUPABASE_URL = 'https://vuftbtsbjzzoovmajyjn.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1ZnRidHNianp6b292bWFqeWpuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc0Nzc4NTAsImV4cCI6MjA3MzA1Mzg1MH0.XWhNltdhYqYVQCWfzNsXJ1HVzDmZ3BqVPOCtkI4yKYQ';
 
-    click_times++;
-    count_text.innerText = `这是你第${click_times}次点我。`
-    //count_text.innerText = `上面一共有${bottle_list.length}种饮料。`;
-}
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+console.log(supabase);
+
+
+
+
