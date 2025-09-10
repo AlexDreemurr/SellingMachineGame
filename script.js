@@ -16,7 +16,7 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
     status('正在注册...')
     const { data, error } = await supabase.auth.signUp({ email, password })
     if (error) return status('注册失败: ' + error.message)
-    status('注册成功，请检查邮箱确认（如果启用邮箱验证）\n' + JSON.stringify(data))
+    status('注册成功，请在邮箱里点击验证\n' + JSON.stringify(data))
 })
 
 // 登录
