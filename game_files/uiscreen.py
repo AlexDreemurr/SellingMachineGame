@@ -98,11 +98,11 @@ class Uiscreen():
             task_name = space_counter(task.name, 16)
             # 如果任务已经完成，百分比会变成绿色
             if task.is_completed:
-                task_percentage = space_counter(makeWordsColor(str(task.complete_percentage) + "%", "green"), 10)
+                task_percentage = space_counter(makeWordsColor(str(task.complete_percentage) + "%", "green"), 7)
             else:
-                task_percentage = space_counter(makeWordsColor(str(task.complete_percentage) + "%", "grey"), 10)
+                task_percentage = space_counter(makeWordsColor(str(task.complete_percentage) + "%", "grey"), 7)
             task_type = space_counter(task.type, 8)
-            task_salary = space_counter(makeWordsColor(str(task.salary), "lightyellow"), 10)
+            task_salary = space_counter(makeWordsColor(str(task.salary), "lightyellow"), 7)
             task_content = space_counter(task.content, 4)
 
             task_line = f"{task_name}{task_percentage}{task_type}{task_salary}{task_content}"
